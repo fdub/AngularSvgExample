@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ShapeComponent } from "../shape.component";
+import { ShapeComponent } from "../shared/shape.component";
 
 @Component({
   selector: '[app-rect]',

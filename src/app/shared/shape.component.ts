@@ -10,10 +10,11 @@ export abstract class ShapeComponent implements OnDestroy, OnChanges {
   private subscription: Subscription;
 
   ngOnChanges(): void {
-    if (!!this.subscription || !this.model)
-      return;
+    const shouldInitialize = !this.subscription || !!this.model;
+    if (shouldInitialize) {
 
-    this.subscription = this.model.mouseMove.subscribe(mousePosition => this.onMove(mousePosition));
+      this.subscription = this.model.mouseMove.subscribe(mousePosition => this.onMove(mousePosition));
+    }
   }
 
   onMove(mousePosition: Vect) {

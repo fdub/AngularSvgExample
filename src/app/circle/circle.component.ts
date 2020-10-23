@@ -1,6 +1,6 @@
 import { Component, EventEmitter, SimpleChanges } from '@angular/core';
 import { Circle } from './circle.model';
-import { ShapeComponent } from '../shape.component';
+import { ShapeComponent } from '../shared/shape.component';
 
 @Component({
   selector: '[app-circle]',
