@@ -1,8 +1,8 @@
 <div class="root">
   <svg style="width:100%; height:100%;">
-    <g *ngFor="let circle of circles">
-      <g *ngIf="circle.type === 'circle'" app-circle [model]="circle" />
-      <g *ngIf="circle.type === 'rect'" app-rect [model]="circle" />
+    <g *ngFor="let shape of shapes">
+      <g *ngIf="shape.type === 'circle'" app-circle [model]="shape" />
+      <g *ngIf="shape.type === 'rect'" app-rect [model]="shape" />
     </g>
   </svg>
 </div>
