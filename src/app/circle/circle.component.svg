@@ -1,24 +1,42 @@
-<svg:circle 
-    [attr.cx]="model.x.value" 
-    [attr.cy]="model.y.value" 
-    r="50" 
-    [class.hovered]="model.isHovered.value"
-    [class.pressed]="model.isDragged.value"
-    (mouseover)="model.isHovered.next(true)" 
-    (mouseout)="model.isHovered.next(false)"
-    (mousedown)="model.isDragged.next(true)" 
-    (mousedown)="lastMousePosition={x:$event.x, y:$event.y}" 
-    (mouseup)="model.isDragged.next(false)"
-></svg:circle>
-<svg:circle 
-    [attr.cx]="model.x.value" 
-    [attr.cy]="model.y.value" 
-    r="30" 
-    [class.hovered]="model.isHovered.value"
-    [class.pressed]="model.isDragged.value"
-    (mouseover)="model.isHovered.next(true)" 
-    (mouseout)="model.isHovered.next(false)"
-    (mousedown)="model.isDragged.next(true)" 
-    (mousedown)="lastMousePosition={x:$event.x, y:$event.y}" 
-    (mouseup)="model.isDragged.next(false)"
-></svg:circle>
+<svg:g>
+    <svg:circle 
+        [attr.cx]="model.x.value + 25" 
+        [attr.cy]="model.y.value + 25" 
+        r="25" 
+        [class.hovered]="model.isHovered.value"
+        [class.pressed]="model.isDragged.value"
+    ></svg:circle>
+    <svg:circle 
+        [attr.cx]="model.x.value + 75" 
+        [attr.cy]="model.y.value + 25" 
+        r="25" 
+        [class.hovered]="model.isHovered.value"
+        [class.pressed]="model.isDragged.value"
+    ></svg:circle>
+    <svg:circle 
+        [attr.cx]="model.x.value + 25" 
+        [attr.cy]="model.y.value + 75" 
+        r="25" 
+        [class.hovered]="model.isHovered.value"
+        [class.pressed]="model.isDragged.value"
+    ></svg:circle>
+    <svg:circle 
+        [attr.cx]="model.x.value + 75" 
+        [attr.cy]="model.y.value + 75" 
+        r="25" 
+        [class.hovered]="model.isHovered.value"
+        [class.pressed]="model.isDragged.value"
+    ></svg:circle>
+    <svg:rect 
+        class="overlay"
+        [attr.x]="model.x.value" 
+        [attr.y]="model.y.value" 
+        width="100"
+        height="100"
+        (mouseover)="model.isHovered.next(true)" 
+        (mouseout)="model.isHovered.next(false)"
+        (mousedown)="model.isDragged.next(true)" 
+        (mousedown)="lastMousePosition={x:$event.x, y:$event.y}" 
+        (mouseup)="model.isDragged.next(false)"></svg:rect>
+
+</svg:g>

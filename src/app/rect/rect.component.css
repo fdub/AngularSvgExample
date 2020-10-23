@@ -8,6 +8,11 @@ rect.hovered {
     fill-opacity: 0.7;
     stroke: #ff8080;
 }
+rect.overlay {
+    fill: transparent;
+    stroke: transparent;
+    stroke-width: 0;
+}
 rect.pressed.hovered {
     fill: #ff8080;
     fill-opacity: 1;

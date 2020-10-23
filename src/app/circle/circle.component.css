@@ -14,3 +14,8 @@ circle.pressed.hovered {
     stroke: red;
     stroke-width: 4px;
 }
+rect.overlay {
+    fill: transparent;
+    stroke: transparent;
+    stroke-width: 0;
+}
