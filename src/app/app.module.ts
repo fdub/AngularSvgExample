@@ -2,12 +2,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { CommonModule } from '@angular/common';
+import { CircleComponent } from './circle/circle.component';
+import { RectComponent } from "./circle/rect.component";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CircleComponent,
+    RectComponent,
   ],
   imports: [
+    CommonModule,
     BrowserModule
   ],
   providers: [],

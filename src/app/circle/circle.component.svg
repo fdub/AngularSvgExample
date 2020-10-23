@@ -1,0 +1,12 @@
+<svg:circle 
+    [attr.cx]="model.x.value" 
+    [attr.cy]="model.y.value" 
+    r="50" 
+    [class.hovered]="model.isHovered.value"
+    [class.pressed]="model.isDragged.value"
+    (mouseover)="model.isHovered.next(true)" 
+    (mouseout)="model.isHovered.next(false)"
+    (mousedown)="model.isDragged.next(true)" 
+    (mousedown)="lastMousePosition={x:$event.x, y:$event.y}" 
+    (mouseup)="model.isDragged.next(false)"
+></svg:circle>

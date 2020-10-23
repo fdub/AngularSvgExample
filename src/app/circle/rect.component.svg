@@ -1,0 +1,13 @@
+<svg:rect 
+    [attr.x]="model.x.value" 
+    [attr.y]="model.y.value" 
+    width="100"
+    height="100"
+    [class.hovered]="model.isHovered.value"
+    [class.pressed]="model.isDragged.value"
+    (mouseover)="model.isHovered.next(true)" 
+    (mouseout)="model.isHovered.next(false)"
+    (mousedown)="model.isDragged.next(true)" 
+    (mousedown)="lastMousePosition={x:$event.x, y:$event.y}" 
+    (mouseup)="model.isDragged.next(false)"
+></svg:rect>

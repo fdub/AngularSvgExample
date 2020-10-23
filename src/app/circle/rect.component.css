@@ -1,0 +1,16 @@
+rect {
+    fill: transparent;
+    stroke: gray;
+    stroke-width: 2px;
+}
+rect.hovered {
+    fill: #ff8080;
+    fill-opacity: 0.7;
+    stroke: #ff8080;
+}
+rect.pressed.hovered {
+    fill: #ff8080;
+    fill-opacity: 1;
+    stroke: red;
+    stroke-width: 4px;
+}
