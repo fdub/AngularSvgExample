@@ -1,7 +1,7 @@
 import { Input, OnDestroy, OnChanges } from '@angular/core';
-import { Shape } from "./Shape";
+import { Shape } from "./shape.model";
 import { Subscription } from 'rxjs';
-import { Vect } from '../vect';
+import { Vect } from './vect';
 
 export abstract class ShapeComponent implements OnDestroy, OnChanges {
   @Input() model!: Shape;

@@ -1,4 +1,4 @@
-import { Vect } from '../vect';
+import { Vect } from './vect';
 import { BehaviorSubject } from 'rxjs';
 
 export abstract class Shape {

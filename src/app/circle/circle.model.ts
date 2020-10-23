@@ -1,5 +1,5 @@
 import { Vect } from '../vect';
-import { Shape } from './Shape';
+import { Shape } from '../shape.model';
 
 export class Circle extends Shape {
     type = "circle"

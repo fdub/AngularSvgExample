@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 import { CircleComponent } from './circle/circle.component';
-import { RectComponent } from "./circle/rect.component";
+import { RectComponent } from "./rect/rect.component";
 
 @NgModule({
   declarations: [

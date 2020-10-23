@@ -1,7 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { Circle } from './circle/circle.model';
-import { Rect } from "./circle/Rect";
-import { Shape } from "./circle/Shape";
+import { Rect } from "./rect/rect.model";
+import { Shape } from "./shape.model";
 
 @Component({
   selector: 'app-root',
