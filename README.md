@@ -1,3 +1,5 @@
 # AngularSvgExample
 
-Simple playground project for Angular components with SVG template.
+Simple playground project for Angular components with SVG template. Drag-and-drop of complex SVG shapes within a single `<svg>` tag on the page.
+
+![](README.png)
