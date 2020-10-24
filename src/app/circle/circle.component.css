@@ -2,6 +2,7 @@ circle {
     fill: transparent;
     stroke: gray;
     stroke-width: 2px;
+    touch-action: none;
 }
 circle.hovered {
     fill: #ff8080;

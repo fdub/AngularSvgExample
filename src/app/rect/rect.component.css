@@ -2,6 +2,7 @@ rect {
     fill: transparent;
     stroke: gray;
     stroke-width: 2px;
+    touch-action: none;
 }
 rect.hovered {
     fill: #8080ff;
