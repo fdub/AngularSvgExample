@@ -1,5 +1,4 @@
 import { Component, EventEmitter, SimpleChanges } from '@angular/core';
-import { Circle } from './circle.model';
 import { ShapeComponent } from '../shared/shape.component';
 
 @Component({

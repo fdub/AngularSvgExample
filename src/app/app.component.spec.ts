@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'AngSvg'`, () => {
+  it(`should have as title 'AngularSvgExample'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('AngSvg');
+    expect(app.title).toEqual('AngularSvgExample');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('AngSvg app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('AngularSvgExample app is running!');
   });
 });
