@@ -5,7 +5,3 @@ Simple playground project for Angular components with SVG template. Drag-and-dro
 ## Try out
 
 https://fdub.github.io/AngularSvgExample/
-
-## Screenshot
-
-![](README.png)
