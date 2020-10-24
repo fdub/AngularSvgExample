@@ -25,4 +25,5 @@ jobs:
           BRANCH: gh-pages
           FOLDER: dist
           CLEAN: true
+          TARGET_FOLDER: /docs
       
