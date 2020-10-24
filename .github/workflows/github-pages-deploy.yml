@@ -33,7 +33,7 @@ jobs:
           persist-credentials: false
       
       - name: Rename folder
-        run: mv AngularSvgExample docs
+        run: git mv AngularSvgExample docs
 
       - name: Commit and Push
         uses: github-actions-x/commit@v2.7
@@ -42,6 +42,6 @@ jobs:
           push-branch: 'gh-pages'
           commit-message: 'Rename output folder'
           force-add: 'true'
-          files: dist
+          files: docs
           name: fdub (from Action)
           email: fdub@posteo.de
