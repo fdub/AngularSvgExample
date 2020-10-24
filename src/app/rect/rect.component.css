@@ -4,9 +4,9 @@ rect {
     stroke-width: 2px;
 }
 rect.hovered {
-    fill: #ff8080;
+    fill: #8080ff;
     fill-opacity: 0.7;
-    stroke: #ff8080;
+    stroke: #8080ff;
 }
 rect.overlay {
     fill: transparent;
@@ -14,7 +14,7 @@ rect.overlay {
     stroke-width: 0;
 }
 rect.pressed.hovered {
-    fill: #ff8080;
+    fill: #8080ff;
     fill-opacity: 1;
     stroke: red;
     stroke-width: 4px;
