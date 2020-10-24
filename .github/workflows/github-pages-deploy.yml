@@ -26,9 +26,22 @@ jobs:
           FOLDER: dist
           CLEAN: true
 
-      - name: Finalize
-        uses: pkg-src/github-action-git-bash@v1.1bas
+      - name: Checkout gh-pages
+        uses: actions/checkout@v2.3.1 
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          args: bash -c "git checkout gh-pages && git mv AngularSvgExample docs && git commit -m \"Rename output path\" && git push"
-        
+          ref: gh-pages
+          persist-credentials: false
+      
+      - name: Rename folder
+        run: mv AngularSvgExample docs
+
+      - name: Commit and Push
+        uses: github-actions-x/commit@v2.7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          push-branch: 'gh-pages'
+          commit-message: 'Rename output folder'
+          force-add: 'true'
+          files: dist
+          name: fdub (from Action)
+          email: fdub@posteo.de
