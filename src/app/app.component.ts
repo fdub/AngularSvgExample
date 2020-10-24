@@ -24,15 +24,16 @@ export class AppComponent {
 
     constructor() {
         this.shapes.forEach(s => {
-            s.isHovered.pipe(distinctUntilChanged()).subscribe(() => this.updateOrder());
-            s.isDragged.pipe(distinctUntilChanged()).subscribe(() => this.updateOrder());
+            s.isHovered.pipe(distinctUntilChanged()).subscribe(() => this.updateOrder(true));
+            s.isDragged.pipe(distinctUntilChanged()).subscribe(() => this.updateOrder(false));
         })
     }
 
-    public updateOrder() {
-        if (this.shapes.find(s => s.isDragged.value)) return;
+    public updateOrder(excludeDragged: boolean) {
+        if (excludeDragged && this.shapes.find(s => s.isDragged.value)) return;
 
         this.shapes = this.shapes.sort((a, b) => new ChainComparer<Shape>(a, b)
+            .compareBy((shape) => shape.isDragged.value)
             .compareBy((shape) => shape.isHovered.value)
             .compareBy((shape) => shape.x.value)
             .compareBy((shape) => shape.y.value)
