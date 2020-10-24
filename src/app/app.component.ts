@@ -39,14 +39,20 @@ export class AppComponent {
             .evaluate());
     }
 
+    @HostListener('touchmove', ['$event'])
+    ontouchmove(e: TouchEvent) {
+        this.shapes.find(s => s.isDragged.value)?.mouseMove.next({ x: e.touches[0].clientX, y: e.touches[0].clientY });
+    }
+
     @HostListener('mousemove', ['$event'])
     onmove(e: MouseEvent) {
         this.shapes.find(s => s.isDragged.value)?.mouseMove.next({ x: e.x, y: e.y });
     }
 
-    @HostListener('mouseleave', ['$event'])
-    @HostListener('mouseup', ['$event'])
-    onup(e: MouseEvent) {
+    @HostListener('touchend', [])
+    @HostListener('mouseleave', [])
+    @HostListener('mouseup', [])
+    onup() {
         this.shapes.find(s => s.isDragged.value)?.isDragged.next(false);
     }
 }

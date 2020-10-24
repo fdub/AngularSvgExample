@@ -37,6 +37,8 @@
         (mouseout)="model.isHovered.next(false)"
         (mousedown)="model.isDragged.next(true)" 
         (mousedown)="lastMousePosition={x:$event.x, y:$event.y}" 
-        (mouseup)="model.isDragged.next(false)"></svg:rect>
-
+        (mouseup)="model.isDragged.next(false)"
+        (touchstart)="model.isDragged.next(true)" 
+        (touchstart)="lastMousePosition={x:$event.touches[0].clientX, y:$event.touches[0].clientY}" 
+        (touchend)="model.isDragged.next(false)"></svg:rect>
 </svg:g>
